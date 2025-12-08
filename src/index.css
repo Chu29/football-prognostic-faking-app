@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("./top-image.jpg");
+  background: url("./assets/top-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
