@@ -1,0 +1,35 @@
+.select-team-ctn {
+  display: inline-block;
+}
+
+.add-team {
+  font-size: 4rem;
+  color: #8fa0b8;
+}
+
+.select-team-ctn p {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.select-team {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: #8e9fb7 solid 5px;
+  border-radius: 100%;
+  padding: 20px;
+  margin-bottom: 2rem;
+  width: 120px;
+  height: 120px;
+
+  background-color: #314258;
+  transition: transform 0.3s ease-in-out;
+}
+
+.select-team:hover {
+  transform: scale(1.1);
+}
