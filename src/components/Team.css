@@ -33,3 +33,18 @@
 .select-team:hover {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 425px) {
+  body {
+    padding: 20px;
+  }
+
+  .select-team {
+    width: 100px;
+    height: 100px;
+  }
+
+  .select-team-ctn p {
+    font-size: 12px;
+  }
+}

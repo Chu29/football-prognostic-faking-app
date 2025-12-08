@@ -11,3 +11,9 @@ body {
   background: linear-gradient(to right, #10192d, #1c293e);
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+}
