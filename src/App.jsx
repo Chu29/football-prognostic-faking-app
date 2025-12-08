@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Score from "./components/Score";
+import Team from "./components/Team";
+import "./App.css";
+import Button from "./components/Button";
+import { RxDownload } from "react-icons/rx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>Football Prognostiker</h1>
+      <main>
+        <Team description="Select Home Team" />
+        <div className="scores">
+          <Score />
+          <span>-</span>
+          <Score />
+        </div>
+        <Team description="Select Away Team" />
+      </main>
+      <div className="download-btn">
+        <RxDownload />
+        <Button />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
