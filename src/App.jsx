@@ -3,6 +3,7 @@ import Team from "./components/Team/Team";
 import "./App.css";
 import Button from "./components/Button";
 import { RxDownload } from "react-icons/rx";
+import Modal from "./components/Modal/Modal";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <RxDownload />
         <Button />
       </div>
+      <Modal />
     </>
   );
 };

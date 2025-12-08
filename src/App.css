@@ -8,7 +8,7 @@ main {
   border: #364154 solid 1px;
   border-radius: 8px;
   padding: 40px;
-  background-image: url("./top-image.jpg");
+  background: linear-gradient(to right, #10192d, #1c293e);
   display: flex;
   justify-content: space-between;
   max-width: 800px;
@@ -40,5 +40,9 @@ main {
 @media screen and (max-width: 425px) {
   main {
     padding: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
   }
 }
