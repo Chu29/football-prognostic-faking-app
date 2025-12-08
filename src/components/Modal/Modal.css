@@ -1,0 +1,63 @@
+.modal-ctn {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #1c293e;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: #364154 solid 1px;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.team-cat {
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  border-bottom: #364154 solid 1px;
+}
+
+.team-cat div {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #314258;
+  cursor: pointer;
+}
+
+.team-cat div:hover {
+  background-color: #31425899;
+}
+
+.team-cat div:focus {
+  background-color: #115dfe;
+}
+
+.flags-ctn {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 20px;
+  gap: 5px;
+  overflow: scroll;
+}
+
+.flags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: #314258;
+  text-align: center;
+}
+
+.flags img {
+  width: 40px;
+  height: 40px;
+}
