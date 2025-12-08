@@ -1,5 +1,5 @@
-import Score from "./components/Score";
-import Team from "./components/Team";
+import Score from "./components/Score/Score";
+import Team from "./components/Team/Team";
 import "./App.css";
 import Button from "./components/Button";
 import { RxDownload } from "react-icons/rx";
