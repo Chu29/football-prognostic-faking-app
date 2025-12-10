@@ -30,6 +30,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.selected-flag {
+  width: inherit;
+}
+
 .select-team:hover {
   transform: scale(1.1);
 }

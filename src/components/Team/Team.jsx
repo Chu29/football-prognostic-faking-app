@@ -1,13 +1,17 @@
-import { FaPlus } from "react-icons/fa6";
 import "./Team.css";
 
-const Team = ({ description }) => {
+const Team = ({ handleShowModal, team }) => {
+  const isTeamSelected = false;
+
   return (
     <div className="select-team-ctn">
-      <div className="select-team">
-        <FaPlus className="add-team" />
+      <div className="select-team" onClick={handleShowModal}>
+        {!isTeamSelected ? (
+          <img src={team.flag} alt="Team Flag" className="selected-flag" />
+        ) : (
+          ""
+        )}
       </div>
-      <p>{description}</p>
     </div>
   );
 };
