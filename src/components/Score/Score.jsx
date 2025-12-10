@@ -1,14 +1,12 @@
-import { useState } from "react";
 import './Score.css'
 
-const Score = () => {
-  const [score, setScore] = useState(0);
+const Score = ({score, onIncrement, onDecrement}) => {
 
   return (
     <div className="scores-ctn">
-      <button onClick={() => setScore((prev) => prev + 1)}>+</button>
+      <button onClick={onIncrement}>+</button>
       <span>{score}</span>
-      <button onClick={() => setScore((prev) => (score == 0 ? 0 : prev - 1))}>
+      <button onClick={onDecrement}>
         -
       </button>
     </div>
