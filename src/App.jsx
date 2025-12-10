@@ -5,6 +5,8 @@ import Button from "./components/Button";
 import { RxDownload } from "react-icons/rx";
 import Modal from "./components/Modal/Modal";
 import { useState } from "react";
+import html2canvas from "html2canvas";
+import download from "downloadjs";
 
 const initialState = {
   name: "TEAM",
@@ -17,6 +19,12 @@ const App = () => {
   const [awayTeam, setAwayTeam] = useState(initialState);
   const [showModal, setShowModal] = useState(false);
   const [teamToSelect, setTeamToSelect] = useState(null);
+
+  const onButtonClick = async () => {
+    const canvas = await html2canvas(document.body);
+    const dataULR = canvas.toDataURL("image/png");
+    download(dataULR, "score.png", "image/png");
+  };
 
   const handleScoreChange = (teamKey, action) => {
     const setter = teamKey === "home" ? setHomeTeam : setAwayTeam;
@@ -69,7 +77,7 @@ const App = () => {
         </div>
         <Team handleShowModal={() => handleShowModal("away")} team={awayTeam} />
       </main>
-      <div className="download-btn">
+      <div className="download-btn" onClick={onButtonClick}>
         <RxDownload />
         <Button />
       </div>
