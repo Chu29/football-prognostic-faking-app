@@ -11,7 +11,7 @@ import download from "downloadjs";
 const initialState = {
   name: "TEAM",
   score: 0,
-  flag: "src/assets/plus.png",
+  flag: "./plus.png",
 };
 
 const App = () => {
