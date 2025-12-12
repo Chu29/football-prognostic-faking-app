@@ -11,7 +11,7 @@ import download from "downloadjs";
 const initialState = {
   name: "TEAM",
   score: 0,
-  flag: "placeholder.jpg",
+  flag: "src/assets/plus.png",
 };
 
 const App = () => {
@@ -21,7 +21,10 @@ const App = () => {
   const [teamToSelect, setTeamToSelect] = useState(null);
 
   const onButtonClick = async () => {
-    const canvas = await html2canvas(document.body);
+    const canvas = await html2canvas(document.body, {
+      useCORS: true,
+      allowTaint: true,
+    });
     const dataULR = canvas.toDataURL("image/png");
     download(dataULR, "score.png", "image/png");
   };
