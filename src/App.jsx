@@ -23,7 +23,7 @@ const App = () => {
   const onButtonClick = async () => {
     const canvas = await html2canvas(document.body, {
       useCORS: true,
-      allowTaint: true,
+      allowTaint: false,
     });
     const dataULR = canvas.toDataURL("image/png");
     download(dataULR, "score.png", "image/png");
