@@ -1,5 +1,8 @@
 .select-team-ctn {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
 }
 
 .add-team {
@@ -7,10 +10,16 @@
   color: #8fa0b8;
 }
 
-.select-team-ctn p {
+.selected-team-name {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
+  line-height: 1.2;
+  max-width: 100%;
+  min-height: 2.4em;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
 }
 
 .select-team {
@@ -18,24 +27,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: #8e9fb7 solid 5px;
   border-radius: 100%;
   padding: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 12px;
   width: 120px;
   height: 120px;
-
   background-color: #314258;
+  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 .selected-flag {
-  width: inherit;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .select-team:hover {
   transform: scale(1.1);
+}
+
+.select-team:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
 }
 
 @media screen and (max-width: 425px) {
@@ -48,7 +63,11 @@
     height: 100px;
   }
 
-  .select-team-ctn p {
+  .select-team-ctn {
+    width: 110px;
+  }
+
+  .selected-team-name {
     font-size: 12px;
   }
 }

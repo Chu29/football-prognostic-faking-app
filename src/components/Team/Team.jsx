@@ -1,17 +1,17 @@
 import "./Team.css";
 
 const Team = ({ handleShowModal, team }) => {
-  const isTeamSelected = false;
-
   return (
     <div className="select-team-ctn">
-      <div className="select-team" onClick={handleShowModal}>
-        {!isTeamSelected ? (
-          <img src={team.flag} alt="Team Flag" className="selected-flag" />
-        ) : (
-          ""
-        )}
-      </div>
+      <button
+        type="button"
+        className="select-team"
+        onClick={handleShowModal}
+        aria-label={`Select ${team.name}`}
+      >
+        <img src={team.flag} alt={`${team.name} flag`} className="selected-flag" />
+      </button>
+      <p className="selected-team-name">{team.name}</p>
     </div>
   );
 };
