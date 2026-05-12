@@ -4,7 +4,7 @@ import "./App.css";
 import Button from "./components/Button";
 import { RxDownload } from "react-icons/rx";
 import Modal from "./components/Modal/Modal";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import html2canvas from "html2canvas";
 import download from "downloadjs";
 
@@ -20,10 +20,15 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [teamToSelect, setTeamToSelect] = useState(null);
 
+  const scoreboardRef = useRef(null);
+
   const onButtonClick = async () => {
-    const canvas = await html2canvas(document.body, {
+    if (!scoreboardRef.current) return;
+
+    const canvas = await html2canvas(scoreboardRef.current, {
       useCORS: true,
       allowTaint: false,
+      scale: window.devicePixelRatio || 1,
     });
     const dataULR = canvas.toDataURL("image/png");
     download(dataULR, "score.png", "image/png");
@@ -63,7 +68,7 @@ const App = () => {
   return (
     <>
       <h1>Football Prognostiker</h1>
-      <main>
+      <main ref={scoreboardRef}>
         <Team handleShowModal={() => handleShowModal("home")} team={homeTeam} />
         <div className="scores">
           <Score
