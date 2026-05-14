@@ -67,8 +67,8 @@ Knowledge about JS, ReactJS, Ky, npm, vite, Zustand and tailwindcss
 
 ## Author
 
-**Chu Abuemkeze M.K**
+**MUEGHE ABUEMKEZE CHU**
 
 - GitHub: [@Chu29](https://github.com/Chu29)
-- Twitter: [@chu_codes](https://x.com/chu_codes)
+- Twitter: [@chu_codes](https://x.com/unku_chu)
 - LinkedIn: [Chu Abuemkeze M.K](https://www.linkedin.com/in/chu-abuemkeze/)
